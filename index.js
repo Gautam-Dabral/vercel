@@ -11,7 +11,17 @@ app.set("view engine", "ejs");
 
 app.route("/")
 .get( (req, res) => {
-    res.render("index", {root: path.join(__dirname, 'views')})
+    res.render("home", {root: path.join(__dirname, 'views')})
+})
+
+app.route("/about")
+.get( (req, res) => {
+    res.render("about", {root: path.join(__dirname, 'views')})
+})
+
+app.route("/contact")
+.get( (req, res) => {
+    res.render("contact", {root: path.join(__dirname, 'views')})
 })
 
 module.exports = app;
